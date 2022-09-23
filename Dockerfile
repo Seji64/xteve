@@ -5,7 +5,7 @@ ENV TZ=Europe/Berlin
 
 RUN apt update && \
     apt upgrade -y && \
-    apt install --no-install-recommends -y ffmpeg vlc curl wget unzip && \
+    apt install --no-install-recommends -y ffmpeg vlc-bin curl wget unzip ca-certificates && \
     apt clean && \
     rm -rf /var/lib/apt/lists/* && \   
     wget https://github.com/xteve-project/xTeVe-Downloads/raw/master/xteve_linux_amd64.zip -O temp.zip; unzip temp.zip -d /usr/bin/; rm temp.zip
