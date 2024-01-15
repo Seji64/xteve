@@ -1,4 +1,4 @@
-xteve -port=34400 -config=/root/.xteve/test/
+/usr/bin/xteve -port=34400 -config=/root/.xteve/test/
 ### remove from here including this line ###
 ### edit your xteve command
 ### rename to xteve.txt
