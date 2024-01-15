@@ -5,18 +5,14 @@ ENV TZ=Europe/Berlin
 
 RUN apt update && \
     apt upgrade -y && \
-    apt install --no-install-recommends --no-install-suggests -y ffmpeg cron vlc-bin curl wget unzip tini ca-certificates && \
+    apt install --no-install-recommends --no-install-suggests -y ffmpeg curl unzip tini ca-certificates && \
     apt clean && \
     rm -rf /var/lib/apt/lists/* && \   
     curl --location https://github.com/xteve-project/xTeVe-Downloads/raw/master/xteve_linux_amd64.zip --output temp.zip; unzip temp.zip -d /usr/bin/; rm temp.zip
 
-ADD cronjob.sh /
 ADD entrypoint.sh /
-ADD sample_cron.txt /
-ADD sample_xteve.txt /
 
 RUN chmod +x /entrypoint.sh && \
-    chmod +x /cronjob.sh && \
     chmod +x /usr/bin/xteve
 
 # Volumes
