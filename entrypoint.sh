@@ -1,6 +1,6 @@
 #!/bin/bash
 
-crond -l 2
+cron -l 2
 
 CRONJOB_FILE=/config/cronjob.sh
 
