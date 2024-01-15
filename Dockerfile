@@ -29,4 +29,4 @@ EXPOSE 34400
 
 # Entrypoint
 ENTRYPOINT ["/usr/bin/tini", "--"]
-CMD ["/bin/sh","/entrypoint.sh"]
+CMD ["/bin/bash","/entrypoint.sh"]
