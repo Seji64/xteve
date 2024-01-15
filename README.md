@@ -1,4 +1,4 @@
 # xteve
-xteve, in docker with cron
+xteve, in docker
 
 customized xteve docker image for my needs
